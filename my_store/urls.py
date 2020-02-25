@@ -15,12 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf import settings
-from django.urls import path,include
+from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("admin/", admin.site.urls),
+    path("search/", include("search.urls", namespace="search")),
+    path("", include("shop.urls", namespace="shop")),
 ]
 
 if settings.DEBUG:
     import debug_toolbar
-    urlpatterns+= [path('__debug__/',include(debug_toolbar.urls))]
+
+    urlpatterns += [path("__debug__/", include(debug_toolbar.urls))]
+

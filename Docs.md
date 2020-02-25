@@ -1,0 +1,4 @@
+Product model:
+    -title
+    -description
+    -
