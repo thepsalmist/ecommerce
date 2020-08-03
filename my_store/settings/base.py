@@ -28,6 +28,7 @@ SECRET_KEY = config("SECRET_KEY")
 
 INSTALLED_APPS = [
     "core.apps.CoreConfig",
+    "cart.apps.CartConfig",
     "search.apps.SearchConfig",
     "shop.apps.ShopConfig",
     "django.contrib.admin",
@@ -36,6 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "crispy_forms",
 ]
 
 MIDDLEWARE = [
@@ -103,3 +105,7 @@ STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+# Crispy forms
+CRISPY_TEMPLATE_PACK = "bootstrap4"
+
