@@ -6,15 +6,17 @@ CRUD
 
 Project 
 
-Product model:
-    -title
-    -description
-    -
+Product/Shop App
 
-Class Based Views
-    get_object - is the method that retrieves the object
+    Product model:
+        -title
+        -description
+        -
 
-    
+    Class Based Views
+        get_object - is the method that retrieves the object
+
+
 Cart App
     Sessions
         store time any given user is on the website, you can set expiry times
@@ -70,3 +72,6 @@ eg. queryset = Product.objects.all()
 Custom Queryset
     create custom querysets to override default 
     class ProductQueryset(models.query.Queryset)
+
+
+Search App
